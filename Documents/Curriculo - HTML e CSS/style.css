@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+
 }
 body{
     height: 100vh;
@@ -36,7 +38,9 @@ img.perfil{
 img.logo:hover{
     cursor: pointer;
     transform: scale(1.15);
-    transition: all 0.5s ease
+    transition: all 0.5s ease;
+    box-shadow: 2px 6px 20px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20%;
 }
 nav{
     display: flex;
@@ -51,7 +55,7 @@ ul{
     gap: 20px;
 }
 main{
-    height: 60%;
+    min-height: 600px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -63,11 +67,11 @@ div.carrossel{
 section{
     background-color: white;
     border-radius: 15px;
-    border-color: #FFD700;
-    box-shadow: 2px 2px 15px 0 rgba(255, 215, 0, 0.2);
+    border-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.1);
 }
 section.sobreMim{
-    border: 1px solid #B0B0B0;
+    border: 1px  #B0B0B0;
     width: 60%;
     height: 60%;
     margin-bottom: 15px;
@@ -81,7 +85,7 @@ section#objetivo{
     margin-left: 5%;
     width: 90%;
     height: 30%;
-    border: 1px solid #B0B0B0;
+    border: 1px  #B0B0B0;
 }
 section.experiencia{
     box-shadow: none;
@@ -92,6 +96,7 @@ section.experiencia{
     margin-top: 20px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     background-color: whitesmoke;
     border: none;
@@ -112,11 +117,24 @@ h3{
 p{
     font-family: 'Open Sans';
     font-size: 14px;
-    margin: 5px 10px 3px 5px;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    margin: 5px 10px 3px 8px;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+a.navegacao:hover{
+    color: skyblue;
+    transform: scale(1.15);
+    transition: all 0.5s ease;
 }
 div.secundaria{
     display: flex;
     margin-bottom: 20px;
     justify-content: space-around;
-    height: 200px;
+    flex-wrap: wrap;
+    min-height: 200px;
+    gap: 10px;
 }
