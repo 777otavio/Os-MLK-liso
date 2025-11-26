@@ -66,6 +66,7 @@ ul.habilidades, .formacao, .contato{
     margin: 20px 10px;           /*Espaço externo: 20px em cima/baixo e 10px esquerdo/direita*/   
     width: 90%;                  /*Ocupa 90% da largura da tela*/ 
     gap: 20px;                   /*Espaço pequeno entre os itens*/
+    overflow-y: auto;            /*Ativa a rolagem vertical caso o conteudo seja maior */   
 }
 main{
     min-height: 600px;             /*Altura mínima garantida de 600px*/ 
