@@ -1,3 +1,115 @@
+*{
+    margin: 0;             /* Remove todas as margens padrão */
+    padding: 0;            /* Remove todos os espaçamentos internos padrão */
+    box-sizing: border-box;/* Inclui borda e padding no cálculo total do tamanho */
+}
 body{
-    background: linear-gradient(to right, #ffffff, #4169E1,#FF0000);
+    background: linear-gradient(to right, #FF0000, #4169E1, #ffffff); /* Aplica um degradê horizontal no fundo */
+    display: flex;                  /* Habilita o uso de flexbox */
+    justify-content: center;        /* Centraliza o conteúdo horizontalmente */
+    align-items: center;            /* Centraliza o conteúdo verticalmente */
+    height: 100vh;                  /* Ocupa toda a altura da tela */
+    width: 100%;                    /* Ocupa toda a largura disponível */
+}
+div.principal{
+    background-image: url(imgFundos/psg.png); /* Define uma imagem de fundo */
+    background-repeat: no-repeat;             /* Evita repetição da imagem */
+    background-position: right center;        /* Posiciona a imagem à direita, centralizada verticalmente */
+    background-size: auto 600px;              /* Ajusta o tamanho da imagem mantendo proporção */
+    width: 80%;                               /* Largura do container principal */
+    height: 90%;                              /* Altura do container principal */
+    display: flex;                            /* Usa flexbox */
+    flex-direction: column;                   /* Organiza os elementos em coluna */
+    justify-content: center;                  /* Centraliza os itens verticalmente */
+    gap: 30px;                                /* Espaçamento entre os elementos filhos */
+    overflow-y: auto;                         /* Ativa rolagem vertical quando necessário */
+}
+.principal::-webkit-scrollbar{
+    display: none;            /* Oculta a barra de rolagem no Chrome */
+}
+h1{
+    font-size: 60px;          /* Tamanho grande para o título */
+    font-weight: 700;         /* Deixa o texto bem espesso */
+    font-family: "Montserrat", sans-serif; /* Define fonte */
+    color: white;             /* Cor do texto */
+}
+h2{
+    font-size: 30px;          /* Tamanho do subtítulo */
+    font-weight: 600;         /* Espessura intermediária */
+    font-family: "Montserrat", sans-serif; /* Mesma fonte */
+    color: #001A43;           /* Define a cor do texto */
+}
+main{
+    display: flex;            /* Ativa flexbox */
+    flex-direction: column;   /* Deixa itens empilhados verticalmente */
+    gap: 30px;                /* Distância entre elementos dentro de <main> */
+    height: 70%;              /* Altura do conteúdo principal */
+}
+p{
+    font-family: "Inter", sans-serif; /* Fonte para textos */
+    font-weight: 400;                 /* Peso padrão */
+    color: #FFFFFF;                   /* Cor do texto */
+    width: 40%;                       /* Limita largura dos parágrafos */
+}
+li{
+    font-family: "Inter", sans-serif; /* Fonte dos itens da lista */
+    gap: 5px;                         /* Espaço interno entre elementos do li */
+    width: 40%;                       /* Largura do item */
+    list-style: none;                 /* Remove marcadores da lista */
+    margin-bottom: 10px;              /* Espaço inferior */
+    padding: 12px;                    /* Espaço interno */
+    background: rgba(255, 255, 255, 0.2); /* Fundo translúcido */
+    border-radius: 10px;              /* Arredondamento das bordas */
+    font-size: 16px;                  /* Tamanho do texto */
+    color: #ffe066;                   /* Cor do texto */
+}
+.ano {
+    color: #a8caff;       /* Destaque para os anos */
+    font-weight: bold;    /* Deixa o texto mais forte */
+}
+
+/* --------------------- RESPONSIVIDADE --------------------- */
+
+@media (max-width: 490px){
+    div.principal{
+        background-image: none; /* Remove a imagem no mobile */
+        width: 100%;            /* Deixa o container mais largo */
+    }
+    header{
+        height: 15%;            /* Altura do cabeçalho */
+        display: flex;          /* Ativa flex no header */
+        margin-left: 15px;      /* Espaçamento esquerdo */
+    }
+    main{
+        background-image: url(imgFundos/psg.png); /* Coloca imagem no fundo do main */
+        background-repeat: no-repeat;             /* Evita repetição da imagem */
+        background-position: right top;           /* Posiciona no topo direito */
+        background-size: 250px 300px;             /* Ajusta tamanho da imagem */
+        margin-left: 10px;                        /* Ajusta margem lateral */
+        min-height: 0;                            /* Evita altura fixa */
+        display: flex;                            /* Flexbox */
+        flex-direction: column;                   /* Itens em coluna */
+        gap: 30px;                                /* Espaçamento vertical */
+    }
+    h1{
+        font-size: 50px;        /* Reduz tamanho no mobile */
+    }
+    p{
+        font-family: "Inter", sans-serif; /* Mesma fonte */
+        font-weight: 400;                 /* Peso padrão */
+        color: #FFFFFF;                   /* Cor do texto */
+        min-height: 200px;                /* Garante altura mínima */
+        overflow-y: auto;                 /* Habilita rolagem vertical se necessário */
+        margin-bottom: 60px;              /* Espaço maior abaixo */
+    }
+    ul{
+        display: flex;        /* Usa flexbox */
+        flex-wrap: wrap;      /* Permite quebra de linha */
+        gap: 20px;            /* Espaço entre itens */
+    }
+    li{
+        display: flex;            /* Ativa flexbox */
+        flex-direction: column;   /* Coloca elementos em coluna */
+        gap: 8px;                 /* Espaço interno */
+    }
 }

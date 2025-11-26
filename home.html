@@ -1,57 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="carrossel.css">
-    <title>Curriculo - Os MLK é liso</title>
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
+<head>  <!-- Cabeçalho da página, contém metadados e links -->
+    <meta charset="UTF-8">  <!-- Define a codificação de caracteres como UTF-8, permitindo acentos e caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Faz o site ficar responsivo, ajustando para celulares e telas menores -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Otimiza a conexão com o Google Fonts, deixando o carregamento mais rápido -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <!-- Segunda conexão otimizada com o servidor de fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!-- Importa a fonte Montserrat em todas as variações de peso (100 a 900) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">     <!-- Importa as fontes Montserrat e Open Sans juntas com diferentes pesos -->
+    <link rel="stylesheet" href="style.css">    <!-- Arquivo principal de estilo da página -->
+    <link rel="stylesheet" href="video.css">    <!-- Arquivo específico para estilização do vídeo -->
+    <title>Curriculo - Os MLK é liso</title>     <!-- Título da aba do navegador -->
 </head>
-<body>
-    <div class="principal">
-        <header>
-            <img src="imagensNeymar/perfil.png" alt="PERFIL NEYMAR" class="perfil">
-            <nav>
-                <h1>Neymar da Silva Santos Junior</h1>
-                <hr width="85%">
-                <nav>
-                    <ul>
-                        <li><a href="#contato" class="navegacao">Contato</a></li>
-                        <li><a href="#habilidades" class="navegacao">Habilidades</a></li>
-                        <li><a href="#objetivo" class="navegacao">Objetivo</a></li>
-                        <li><a href="#formacao" class="navegacao">Formação</a></li>
-                    </ul>
-                </nav>
-            </nav>
-        </header>
-        <main>
-            <div class="carrossel">
-                <div class="slides">
-                    <div class="slide">
-                        <img src="imagensNeymar/imgSantos.jpg" alt="BANNER NEYMAR NO SANTOS">
-                    </div>
-                    <div class="slide">
-                        <img src="imagensNeymar/imgBarcelona.jpg" alt="BANNER NEYMAR NO BARCELONA">
-                    </div>
-                    <div class="slide">
-                        <img src="imagensNeymar/imgPSG.jpg" alt="BANNER NEYMAR NO PSG">
-                    </div>
-                    <div class="slide">
-                        <img src="imagensNeymar/imgAl-hillal.jpg" alt="BANNER NEYMAR NO AL-HILLAL">
-                    </div>
-                    <div class="slide">
-                        <img src="imagensNeymar/imgBrasil.jpg" alt="BANNER NEYMAR NA SELEÇÃO BRASILEIRA">
-                    </div>                                                                                
-                </div>
-            </div>
-            <section class="sobreMim">
-                <h3>Sobre Mim</h3>
+<body>  <!-- Inicio do corpo da pagina-->
+    <div class="principal"> <!-- Inicio da div 'principal', que contem toda a estrutura do site -->
+        <header>    <!-- Início do cabeçalho -->
+            <img src="imagensNeymar/perfil.png" alt="PERFIL NEYMAR" class="perfil">   <!-- Imagem de perfil do Neymar, com classe para estilização -->
+            <nav class="pai">   <!-- Contêiner principal da navegação e título -->
+                <h1>Neymar da Silva Santos Junior</h1>   <!-- Título principal da página -->
+                <hr width="85%">     <!-- Linha horizontal decorativa com largura de 85% -->
+                <nav>      <!-- Segunda área de navegação (menu) -->              
+                    <ul>   <!-- Lista de itens do menu -->
+                        <li><a href="#contato" class="navegacao">Contato</a></li>           <!-- Link que leva à seção "contato" -->
+                        <li><a href="#habilidades" class="navegacao">Habilidades</a></li>   <!-- Link para a seção "habilidades" -->
+                        <li><a href="#objetivo" class="navegacao">Objetivo</a></li>         <!-- Link para a seção "objetivo" -->
+                        <li><a href="#formacao" class="navegacao">Formação</a></li>         <!-- Link para a seção "formacao" -->
+                    </ul>   <!-- Fim da lista de navegação -->
+                </nav>  <!-- Fim da navegação interna -->
+            </nav>  <!-- Fim do contêiner principal -->
+        </header>   <!-- Fim do cabeçalho -->
+        <main>  <!-- Início do conteúdo principal da página -->
+            <div class="esquerda">  <!-- Inicio do contêiner da parte esquerda -->
+                <img src="imagem-video.jpg" class="img" id="img">   <!-- Imagem exibida antes do vídeo aparecer. Classe e ID usados para estilizar e manipular via JS -->
+                <div class="play-botao" id="playBotao">▶</div>   <!-- Ícone de botão de play sobre a imagem para iniciar o vídeo -->
+                <video id="videoPlayer" src="edit-neymar.mp4"></video>  <!-- Elemento de vídeo que será reproduzido quando o usuário clicar no botão -->
+            </div>  <!-- Fim da área da esquerda -->
+            <section class="sobreMim">  <!-- Inicio da seção 'Sobre Mim' -->
+                <h3>Sobre Mim</h3>  <!-- Título da seção -->
                 <p>Eu sou Neymar da Silva Santos Junior, nasci em 5 de fevereiro de 1992, em Mogi
                 das Cruzes, São Paulo. Desde pequeno, sempre fui apaixonado por futebol e sonhava em
                 jogar profissionalmente. Comecei minha carreira no Santos Futebol Clube, onde conquistei
@@ -61,30 +45,76 @@
                 Também tenhi muito orgulho de representar a Seleção Brasileira, com quem conquistei o outo olímpico em 2016,
                 no Rio de Janeiro. Fora dos campos, gosto de aproveitar o tempo com minha família, amigos e de me envolever
                 em projetos sociais que ajudam crianças a realizarem seus sonhos, assim como eu realizei o meu.
-                </p>
-            </section>
-            <section id="objetivo">
-                <h3>Objetivo</h3>
-            </section>
-        </main>
-        <section class="experiencia">
+                </p>    <!-- Texto descritivo sobre a vida do Neymar -->
+            </section>  <!-- Fim da seção 'Sobre Mim' -->
+            <section id="objetivo"> <!-- Inicio da seção 'Objetivo' -->
+                <h3>Objetivo</h3>   <!-- Título da seção -->
+                <p>Busco vivenciar um novo mundo, longe dos holofotes, onde eu possa sentir na pele a rotina e os desafios 
+                    que fazem parte da vida de qualquer cidadão comum. Quero colocar minhas habilidades, minha dedicação e minha 
+                    capacidade de trabalhar em equipe a serviço de novas experiências profissionais. Meu objetivo é aprender, 
+                    crescer e construir algo diferente, valorizando cada etapa do processo e entendendo a realidade que tantas pessoas 
+                    enfrentam diariamente. Estou pronto para recomeçar, evoluir e contribuir de forma verdadeira em um novo caminho.
+                </p>    <!-- Texto sobre o objetivo profissional/ pessoal do Neymar -->
+            </section>  <!-- Fim da seção 'Objetivo' -->
+        </main> <!-- Fim do conteúdo principal -->
+        <section class="experiencia">  <!-- Inicio da seção que mostra as experiências do Neymar em diferentes clubes -->
             <a href="paginas/pageSantos.html"><img src="imagensLogo/logoSantos.png" alt="LOGO SANTOS" class="logo"></a>
-            <a href="paginas/pageBarcelona.html"><img src="imagensLogo/logoBarcelona.png" alt="LOGO BARCELONA" class="logo"></a>
+                <!-- Link que leva para a página sobre o Santos -->
+                <!-- Logo do Santos -->
+            <a href="paginas/pageBarcelona.html"logo"><img src="imagensLogo/logoBarcelona.png" alt="LOGO BARCELONA" class="logo"></a>
+                <!-- Link para a página sobre o Barcelona -->
+                <!-- Logo do Barcelona -->
             <a href="paginas/pagePSG.html"><img src="imagensLogo/logoPSG.png" alt="LOGO PSG" class="logo"></a>
+                <!-- Link para a página sobre o PSG -->
+                <!-- Logo do PSG -->
             <a href="paginas/pageAlHilal.html"><img src="imagensLogo/logoAl-Hilal.png" alt="LOGO AL-HILAU" class="logo"></a>
+                <!-- Link para a página sobre o Al Hilal -->
+                <!-- Logo do Al Hilal -->
             <a href="paginas/pageBrasil.html"><img src="imagensLogo/logoBrasil.png" alt="LOGO SELEÇÃO BRASILEIRA" class="logo"></a>
-        </section>         
-        <div class="secundaria">     
-            <section id="contato" class="secundaria">
-                <h3>Contato</h3>
-            </section>
-            <section id="habilidades" class="secundaria">
-                <h3>Habilidades</h3>
-            </section>
-            <section id="formacao" class="secundaria">
-                <h3>Formação</h3>
-            </section>             
-        </div>
-    </div>
-</body>
-</html>
+                <!-- Link para a página sobre a Seleção Brasileira -->
+                <!-- Logo da Seleção Brasileira -->
+        </section>    <!-- Fim da secão de experiências -->      
+        <div class="secundaria">    <!-- Contêiner principal que agrupa as três seções: Formação, Habilidades e Contato --> 
+            <section id="formacao" class="secundaria">  <!-- Seção de formação acadêmica -->
+                <h3>Formação</h3>   <!-- Título da seção -->
+                <ul class="formacao">    <!-- Lista contendo as instituições onde estudou -->
+                    <li>🎓 Colegio Municipal Zulema Contrim</li>     <!-- Primeira formação -->
+                    <li>🎓 Colegio Estadual Rafael Spínola Neto</li>    <!-- Segunda formação -->
+                    <li>🎓 Centro Territorial de Educação Profissionalizante</li>   <!-- Terceira formação -->
+                </ul>   <!-- Fim da lista de formação -->              
+            </section>  <!-- Fim da seção de formação -->
+            <section id="habilidades" class="secundaria">   <!-- Seção de habilidades pessoais/profissionais -->
+                <h3>Habilidades</h3>    <!-- Título da seção -->
+                <ul class="habilidades">    <!-- Lista de habilidades -->
+                    <li>✅ Ótimo relacionamento com as pessoas</li> <!-- Boa comunicação/interação -->
+                    <li>✅ Trabalho em equipe</li>     <!-- Habilidade de colaborar com outros -->
+                    <li>✅ Adaptação rápida na empresa</li>  <!-- Capacidade de se ajustar ao ambiente -->
+                    <li>✅ Facilidade em aprendizado de novas funções</li>  <!-- Aprendizado rápido -->
+                </ul>   <!-- Fim da lista de habilidades -->
+            </section>  <!-- Fim da seção de habilidades -->
+            <section id="contato" class="secundaria">   <!-- Seção de informações de contato --> 
+                <h3>Contato</h3>    <!-- Título da seção -->
+                <ul class="contato">    <!-- Lista de informações de contato -->
+                    <li>📞 55+ (11) 9 9984-3365</li>    <!-- Número de telefone -->
+                    <li>📧 neymarjr10@gmail.com</li>    <!-- Email -->
+                    <li>📱<a href="https://www.instagram.com/neymarjr/" class="insta">  neymarjr</a></li>   <!-- Link para o Instagram -->
+                    <li>📍 Morro de Santa Terezinha, bairro do Marapé, Santos-SP</li>   <!-- Localização -->
+                </ul>   <!-- Fim da lista de contato/informação -->
+            </section>  <!-- Fim da seção de contato -->        
+        </div>  <!-- Fim do contêiner secundário -->
+    </div>  <!-- Fim da div 'principal' -->
+    <script>
+        const video = document.getElementById("videoPlayer");   /* Seleciona o elemento <video> pelo ID "videoPlayer" e armazena na variável 'video'*/
+        const thumb = document.getElementById("img");           /* Seleciona a imagem de capa (thumbnail) do vídeo usando o ID "img" */
+        const playBotao = document.getElementById("playBotao"); /* Seleciona o botão de play (o ícone ▶) usando o ID "playBotao" */
+
+        playBotao.addEventListener("click", () => { /* Adiciona um evento de clique ao botão de play */
+            thumb.style.display = "none";   /* Quando clicado, esconde a imagem inicial */
+            playBotao.style.display = "none"; /* Também esconde o botão de play */
+
+            video.style.display = "block";  /* Faz o vídeo aparecer na tela */
+            video.play();   /* Inicia a reprodução do vídeo automaticamente */
+        });
+    </script>    
+</body> <!-- Fim do corpo da página -->
+</html> <!-- Fim do documento HTML -->

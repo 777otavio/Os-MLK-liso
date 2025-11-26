@@ -1,140 +1,179 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-
+    padding: 0;              /*Remove todo o padding padrao*/
+    margin: 0;               /*Remove as margens padrao*/
+    box-sizing: border-box;  /*Faz a conta de width/height incluir bordas e padding*/
+    scroll-behavior: smooth; /*Suaviza a rolagem da pagina*/
 }
 body{
-    height: 100vh;
-    width: calc(100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;           /*Ocupa 100% da altura visível da tela*/       
+    width: 100%;             /*Ocupa 100% da largura tela*/
+    display: flex;           /*Ativa o flexbox para organizar os elementos*/
+    justify-content: center; /*Centraliza o conteudo horizontalmente*/
+    align-items: center;     /*Centraliza o conteudo verticalmente*/
 }
 div.principal{
-    background-color: whitesmoke;
-    box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.1);
-    width: 90%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
+    background-color: whitesmoke;                  /*Define um fundo claro  para diferenciar do body*/ 
+    box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.1); /*Sombra suave ao redor para dar profundiade*/
+    max-width: 1200px;                               /*Limita a largura máxima do elemento */      
+    width: 90%;                                      /*Ocupa 90% da largura da tela*/ 
+    height: 90%;                                     /*Ocupa 90% da altura da tela*/ 
+    display: flex;                                   /*Usa flexbox para organizar os itens internos*/       
+    flex-direction: column;                          /*Organiza os elementos verticalemnte */   
+    overflow-y: auto;                                /*Ativa a rolagem vertical caso o conteudo seja maior */   
 }
 .principal::-webkit-scrollbar {
-    display: none;
+    display: none; /*Esconde a barra de rolagem no WebKit*/
 }
 header{
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 15px;
-    margin-top: 15px;
+    display: flex;                 /*Ativa flexbox para organizar os itens do header*/ 
+    justify-content: space-around; /*Espaça os elementos com espaço igual ao redor*/
+    margin-bottom: 30px;           /*Espaço abaixo do header*/
+    margin-top: 15px;              /*Espaço acima do header*/ 
 }
 img.perfil{
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
+    height: 70px;       /*Altura fixa da imagem*/            
+    width: 70px;        /*Largura fixa da imagem*/
+    border-radius: 50%; /*Deixa a imagem completamente redonda*/
 }
 img.logo:hover{
-    cursor: pointer;
-    transform: scale(1.15);
-    transition: all 0.5s ease;
-    box-shadow: 2px 6px 20px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 20%;
+    cursor: pointer;                                 /*Mostra que o elemento é clicavel*/       
+    transform: scale(1.10);                          /*Aumenta a logo em 10% ao passar o mouse*/           
+    transition: all 0.5s ease;                       /*Suavisa a animação em meio segundo*/   
+    box-shadow: 2px 6px 20px 0 rgba(0, 0, 0, 0.2); /*Sombra mais intensa quando passar o mouse*/
+    border-radius: 10%;                              /*Arredonda levemente a imagem no hover*/       
+}
+nav.pai{
+    margin-left: 20px; /*Cria espaçamento de 20px à esquerda da nav*/
 }
 nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    display: flex;           /*Ativa o flexbox para organizar os itens da nav*/   
+    flex-wrap: wrap;         /*Permite que os itens quebrem linha se faltar espaço*/
+    flex-direction: column;  /*Organiza os itens da nav verticalmente*/
+    justify-content: center; /*Centraliza os itens verticalmente no container*/
+    align-items: center;     /*Centraliza horizontalmente*/
+    gap: 10px;               /*Espaço uniforme entre os itens*/   
 }
 ul{
-    display: flex;
-    list-style: none;
-    gap: 20px;
+    font-family: 'Open Sans';  /* Define a fonte principal do texto como Open Sans */
+    display: flex;           /*Coloca os itens <li> lado a lado com flexbox*/   
+    list-style: none;        /*Remove os marcadores da lista*/   
+    flex-wrap: wrap;         /*Permite quebra linha quando necessario*/   
+    justify-content: center; /*Centraliza os itens horizontalmente*/
+    gap: 20px;               /*Espaço de 20px entre cada <li>*/
+}
+ul.habilidades, .formacao, .contato{
+    justify-content: flex-start; /*Alinha os itens ao inicio (lado esquerdo)*/
+    margin: 20px 10px;           /*Espaço externo: 20px em cima/baixo e 10px esquerdo/direita*/   
+    width: 90%;                  /*Ocupa 90% da largura da tela*/ 
+    gap: 20px;                   /*Espaço pequeno entre os itens*/
 }
 main{
-    min-height: 600px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    min-height: 600px;             /*Altura mínima garantida de 600px*/ 
+    display: flex;                 /*Ativa flexbox para organizar os elementos internos*/ 
+    justify-content: space-around; /*Espaços iguais entre os itens*/
+    flex-wrap: wrap;               /*Permite que os itens quebrem linha*/ 
 }
-div.carrossel{
-    width: 30%;
-    height: 60%;
+div.esquerda{
+    width: 30%;                                   /* O elemento ocupa 30% da largura disponível do container */ 
+    height: 60%;                                  /* O elemento ocupa 60% da altura disponível do container */  
+    border-radius: 15px;                          /* Arredonda os cantos em 15px */
+    overflow: hidden;                             /* Esconde qualquer conteúdo que ultrapasse os limites do elemento */
+    position: relative;                           /* Define o elemento como referência para itens posicionados dentro dele */      
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25); /* Cria uma sombra suave abaixo do elemento */
+    background-color: transparent;                /* Deixa o fundo do elemento totalmente transparente */          
 }
+
 section{
-    background-color: white;
-    border-radius: 15px;
-    border-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.1);
+    background-color: white;                       /*Fundo para descatar o conteudo*/ 
+    border-radius: 15px;                             /*Bordas arredondadas*/   
+    border-color: rgba(0, 0, 0, 0.2);              /*Cor da borda (mas sem largura definda)*/ 
+    box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.2); /*Sombra leve ao redor da seção*/
 }
 section.sobreMim{
-    border: 1px  #B0B0B0;
-    width: 60%;
-    height: 60%;
-    margin-bottom: 15px;
-    overflow-y: auto;
+    background-color: whitesmoke; /* Define um fundo cinza bem claro para destacar o conteúdo */
+    box-shadow: none;               /* Remove qualquer sombra do elemento */ 
+    border: none;                   /* Remove qualquer borda visível */
+    width: 60%;                     /* Ocupa 60% da largura disponível do container */
+    height: 60%;                    /* Ocupa 60% da altura disponível do container */
+    margin-bottom: 15px;            /* Adiciona um espaço de 15px abaixo do elemento */
+    overflow-y: auto;               /* Ativa a rolagem vertical caso o conteúdo ultrapasse a altura */
 }
 .sobreMim::-webkit-scrollbar {
-  display: none; 
+    display: none;    /*Esconde a barra de rolagem no WebKit*/
 }
 section#objetivo{
-    margin-right: auto;
-    margin-left: 5%;
-    width: 90%;
-    height: 30%;
-    border: 1px  #B0B0B0;
+    width: 90%;            /* O elemento ocupa 90% da largura disponível */
+    height: 30%;           /* O elemento ocupa 30% da altura do container */
+    border: 1px #B0B0B0; /* Cria uma borda de 1px com cor cinza (#B0B0B0) */
+    overflow-y: auto;      /* Ativa a rolagem vertical se o conteúdo ultrapassar a altura */
+}
+#objetivo::-webkit-scrollbar{
+    display: none;  /*Esconde a barra de rolagem no WebKit*/
 }
 section.experiencia{
-    box-shadow: none;
-    margin-right: auto;
-    margin-left: 5%;
-    margin-bottom: 20px;
-    width: 90%;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: whitesmoke;
-    border: none;
+    box-shadow: none;                 /* Remove qualquer sombra do elemento */
+    margin: 0 15px 20px;              /* Define as margens: top 0, laterais 15px, bottom 20px */
+    display: flex;                    /* Ativa o Flexbox para organizar os itens internos */
+    flex-wrap: wrap;                  /* Permite que os itens quebrem linha quando não couberem */
+    justify-content: space-around;    /* Distribui os itens com espaço igual ao redor */
+    background-color: whitesmoke;   /* Define um fundo cinza bem claro */
+    gap: 15px;                        /* Define um espaçamento de 15px entre os itens do flex */
 }
 section.secundaria{
-    width: 300px;
+    width: 270px;   /* Define a largura fixa do elemento em 270px */
+    height: 270px;  /* Define a altura fixa do elemento em 270px */
 }
 h1,h3{
-    font-family: "Montserrat";
-    font-style: italic;
-    font-weight: 500;
-    color: #1E1E1E;
+    font-family: "Montserrat";   /* Define a fonte principal do texto como Montserrat */
+    font-style: italic;           /* Deixa o texto em estilo itálico */
+    font-weight: 500;             /* Define a espessura da fonte */
+    color: #1E1E1E;               /* Define a cor do texto como um cinza quase preto */
 }
 h3{
-    margin-top: 10px;
-    margin-left: 25px;
+    font-weight: 700;     /* Define a espessura da fonte */
+    margin-top: 10px;     /* Adiciona um espaço de 10px acima do elemento */
+    margin-left: 25px;    /* Adiciona um espaço de 25px à esquerda do elemento */
 }
 p{
-    font-family: 'Open Sans';
-    font-size: 14px;
-    letter-spacing: 1px;
-    line-height: 1.6;
-    margin: 5px 10px 3px 8px;
+    font-family: 'Open Sans';  /* Define a fonte principal do texto como Open Sans */
+    font-size: 14px;           /* Define o tamanho do texto em 14px */
+    letter-spacing: 1px;       /* Aumenta o espaçamento entre as letras em 1px */
+    line-height: 1.6;          /* Define a altura da linha, deixando o texto mais espaçado e legível */
+    margin: 5px 10px 3px 8px;  /* Define as margens: top 5px, right 10px, bottom 3px, left 8px */
 }
 a{
-    color: inherit;
-    text-decoration: none;
+    color: inherit;          /* Faz o link herdar a cor do elemento pai, mantendo a paleta do layout */
+    text-decoration: none;   /* Remove o sublinhado padrão dos links */
+    font-size: 12px;         /* Define o tamanho da fonte do link em 12px */
 }
-a.navegacao:hover{
-    color: skyblue;
-    transform: scale(1.15);
-    transition: all 0.5s ease;
+a.insta{
+    font-size: 16px;    /* Define o tamanho do texto em 16px */
+}
+a.navegacao:hover, .insta:hover{
+    color: skyblue;            /* Muda a cor do texto para um azul claro (skyblue) */
+    transform: scale(1.15);      /* Aumenta o elemento em 15%, criando um efeito de zoom */
+    transition: all 0.5s ease;   /* Suaviza todas as transições do elemento em 0.5s */
 }
 div.secundaria{
-    display: flex;
-    margin-bottom: 20px;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    min-height: 200px;
-    gap: 10px;
+    display: flex;                   /* Ativa o Flexbox para organizar os itens internos */
+    justify-content: space-around;   /* Distribui os itens com espaçamento uniforme ao redor */
+    flex-wrap: wrap;                 /* Permite que os itens quebrem linha quando não couberem */
+    gap: 10px;                       /* Define um espaçamento de 10px entre os itens do flex */
+    margin: 0 15px 20px;             /* Margem: top 0, laterais 15px, bottom 20px */
 }
+
+@media(max-width: 490px){
+    img.perfil{
+        align-self: center; /* Centraliza somente este elemento dentro do container flex. */
+        padding-left: 5px;  /* Adiciona um espaço de 5px à esquerda da imagem para afastar */
+    }
+    h1{
+        font-size: 30px;  /* Define o tamanho do texto em 30px */  
+    }
+    section.sobreMim {
+        width: 45%;   /* Faz a seção 'sobreMim' ocupar 45% da largura do container */
+    }
+    div.esquerda {
+        width: 45%;   /* Faz a div 'esquerda' ocupar também 45%, permitindo layout lado a lado */
+    }
+    }

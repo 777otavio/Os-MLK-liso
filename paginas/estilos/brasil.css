@@ -1,3 +1,115 @@
 *{
-    background: linear-gradient(to right,#FFFF00,#008000);
+    margin: 0;                  /* remove margem padrão de todos os elementos */
+    padding: 0;                 /* remove padding padrão de todos os elementos */
+    box-sizing: border-box;     /* inclui bordas e paddings no cálculo total do tamanho */
+}
+body{
+    background: linear-gradient(to right,#008000, #FFFF00); /* aplica um fundo em degradê horizontal */
+    display: flex;              /* ativa o flexbox */
+    justify-content: center;    /* centraliza o conteúdo horizontalmente */
+    align-items: center;        /* centraliza o conteúdo verticalmente */
+    height: 100vh;              /* deixa a altura igual à altura total da tela */
+    width: 100%;                /* ocupa toda a largura da tela */
+}
+div.principal{
+    background-image: url(imgFundos/brasil.jpg); /* define uma imagem no fundo do container */
+    background-repeat: no-repeat;                /* impede a repetição da imagem */
+    background-position: right center;           /* posiciona a imagem à direita, centralizada verticalmente */
+    background-size: auto 600px;                 /* ajusta o tamanho da imagem mantendo proporção */
+    width: 80%;                                  /* define a largura do container */
+    height: 90%;                                 /* define a altura do container */
+    display: flex;                               /* ativa o flexbox */
+    flex-direction: column;                      /* organiza os elementos na vertical */
+    justify-content: center;                     /* centraliza o conteúdo internamente */
+    gap: 30px;                                   /* cria um espaço entre os elementos internos */
+    overflow-y: auto;                            /* ativa rolagem vertical quando necessário */
+}
+.principal::-webkit-scrollbar{
+    display: none;      /* oculta a barra de rolagem no Chrome */
+}
+h1{
+    font-size: 60px;                        /* tamanho da fonte do título */
+    font-weight: 700;                       /* deixa a fonte mais espessa */
+    font-family: "Montserrat", sans-serif;  /* define a família tipográfica */
+    color: white;                         /* cor do texto */
+}
+h2{
+    font-size: 30px;                            /* tamanho da fonte do subtítulo */
+    font-weight: 600;                           /* define peso da fonte */
+    font-family: "Montserrat", sans-serif;      /* define a família tipográfica */
+    color: #0408ff;                           /* cor do texto */
+}
+main{
+    display: flex;          /* ativa o flexbox */
+    flex-direction: column; /* coloca os elementos um abaixo do outro */
+    gap: 30px;              /* espaço entre os elementos */
+    height: 70%;            /* define a altura do bloco principal */
+}
+p{
+    font-family: "Inter", sans-serif; /* define a família tipográfica */
+    font-weight: 400;                 /* define peso da fonte */
+    color: #FFFFFF;                 /* cor do texto */
+    width: 40%;                       /* limita a largura do parágrafo */
+}
+li{
+    font-family: "Inter", sans-serif;       /* define a tipografia da lista */
+    gap: 5px;                               /* espaço interno entre possíveis elementos internos */
+    width: 40%;                             /* largura de cada item */
+    list-style: none;                       /* remove os marcadores de lista */
+    margin-bottom: 10px;                    /* espaço abaixo de cada item */
+    padding: 12px;                          /* espaço interno do item */
+    background: rgba(255, 255, 255, 0.2); /* fundo semitransparente */
+    border-radius: 10px;                    /* arredonda as bordas */
+    font-size: 16px;                        /* tamanho da fonte */
+    color: #a8ff96;                       /* cor do texto */
+}
+.ano {
+    color: #fffb00;     /* cor específica aplicada ao ano */
+    font-weight: bold;    /* deixa o texto em negrito */
+}
+
+/* --------------------- RESPONSIVIDADE --------------------- */
+
+@media (max-width: 490px){  /* regras aplicadas somente em telas pequenas */
+    div.principal{
+        background-image: none;     /* remove a imagem no fundo do container */
+        width: 100%;                /* aumenta para a largura total */
+    }
+    header{
+        height: 15%;        /* define altura do cabeçalho */
+        display: flex;      /* ativa o flexbox */
+        margin-left: 15px;  /* cria um recuo à esquerda */
+    }
+    main{
+        background-image: url(imgFundos/brasil.jpg); /* aplica imagem dentro da área principal */
+        background-repeat: no-repeat;                /* impede que a imagem repita */
+        background-position: right top;              /* posiciona a imagem no canto superior direito */
+        background-size: 250px 300px;                /* define tamanho da imagem */
+        margin-left: 10px;                           /* leve afastamento lateral */
+        min-height: 0;                               /* permite que a altura se ajuste */
+        display: flex;                               /* ativa flexbox */
+        flex-direction: column;                      /* organiza o conteúdo na vertical */
+        gap: 30px;                                   /* espaço entre os elementos */
+    }
+    h1{
+        font-size: 50px;        /* reduz o tamanho do título */
+    }
+    p{
+        font-family: "Inter", sans-serif; /* mantém a tipografia */
+        font-weight: 400;                 /* mantém o peso da fonte */
+        color: #FFFFFF;                 /* mantém a cor do texto */
+        min-height: 200px;                /* garante altura mínima */
+        overflow-y: auto;                 /* ativa rolagem vertical se necessário */
+        margin-bottom: 40px;              /* afasta o parágrafo do próximo elemento */
+    }
+    ul{
+        display: flex;      /* ativa o flexbox */
+        flex-wrap: wrap;    /* permite quebra de linha */
+        gap: 20px;          /* espaço entre os itens */
+    }
+    li{
+        display: flex;          /* ativa flexbox */
+        flex-direction: column; /* organiza conteúdo na vertical */
+        gap: 8px;               /* espaço interno entre itens */
+    }
 }

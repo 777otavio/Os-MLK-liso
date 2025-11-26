@@ -1,0 +1,30 @@
+.img {
+    width: 100%;        /* A imagem ocupa toda a largura do container */
+    height: 100%;       /* A imagem ocupa toda a altura do container */
+    object-fit: cover;  /* A imagem preenche o espaço sem distorcer, cortando as bordas se necessário */
+}
+
+.play-botao {
+    position: absolute;                  /* Permite posicionar o botão por cima da imagem */
+    top: 50%;                            /* Centraliza verticalmente */
+    left: 50%;                           /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%);    /* Ajuste perfeito para centralização */
+    font-size: 20px;                     /* Tamanho do ícone/texto do botão */
+    color: white;                      /* Cor do ícone */
+    background: rgba(59, 59, 59, 0.5); /* Fundo escuro semitransparente */
+    padding: 15px 20px;                  /* Espaçamento interno, deixando o botão circular */
+    border-radius: 50%;                  /* Torna o botão totalmente redondo */
+    cursor: pointer;                     /* Troca o cursor para mãozinha */
+    transition: 0.2s ease;               /* Suaviza efeitos de hover */
+}
+
+.play-botao:hover {
+    background: rgba(0,0,0,0.7);  /* Escurece o fundo ao passar o mouse */
+}
+
+#videoPlayer {
+    width: 100%;         /* O vídeo ocupa toda a largura do container */
+    height: 100%;        /* O vídeo ocupa toda a altura do container */
+    object-fit: cover;   /* Mantém proporção e preenche o espaço */
+    display: none;       /* Começa escondido até o usuário clicar */
+}

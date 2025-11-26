@@ -1,3 +1,112 @@
 *{
-    background: linear-gradient(to right, #ffffff, #4169E1);
+    margin: 0;              /* Remove margem padrão de todos os elementos */
+    padding: 0;             /* Remove padding padrão */
+    box-sizing: border-box; /* Facilita o controle de tamanhos de elementos */
+}
+body{
+    background: linear-gradient(to right, #4169E1, #ffffff); /* Cria um fundo com gradiente */
+    display: flex;              /* Permite centralizar o conteúdo */
+    justify-content: center;    /* Centraliza horizontalmente */
+    align-items: center;        /* Centraliza verticalmente */
+    height: 100vh;              /* Ocupa toda a altura da tela */
+    width: 100%;                /* Ocupa toda a largura da tela */
+}
+div.principal{
+    background-image: url(imgFundos/al-hilal.png); /* Define imagem decorativa no fundo */
+    background-repeat: no-repeat;                  /* Evita repetição da imagem */
+    background-position: right center;             /* Posiciona a imagem à direita */
+    background-size: auto 600px;                   /* Ajusta o tamanho da imagem */
+    width: 80%;                                    /* Define largura do container */
+    height: 90%;                                   /* Define altura do container */
+    display: flex;                                 /* Layout flexível */
+    flex-direction: column;                        /* Elementos ficam em coluna */
+    justify-content: center;                       /* Centraliza o conteúdo verticalmente */
+    gap: 30px;                                     /* Espaçamento entre elementos */
+    overflow-y: auto;                              /* Permite rolagem somente no eixo vertical */
+}
+.principal::-webkit-scrollbar{
+    display: none; /* Esconde a barra de rolagem no Chrome */
+}
+h1{
+    font-size: 60px;        /* Tamanho grande para o título */
+    font-weight: 700;       /* Deixa o texto mais forte */
+    font-family: "Montserrat", sans-serif; /* Define fonte do título */
+    color: white;
+}
+h2{
+    font-size: 30px;        /* Tamanho do subtítulo */
+    font-weight: 600;       /* Peso intermediário */
+    font-family: "Montserrat", sans-serif;
+    color: #2600ff;
+}
+main{
+    display: flex;         /* Layout flexível */
+    flex-direction: column; /* Elementos em coluna */
+    gap: 30px;             /* Espaço entre eles */
+    height: 70%;           /* Controla altura geral */
+}
+p{
+    font-family: "Inter", sans-serif; /* Fonte de leitura */
+    font-weight: 400;                 /* Peso padrão */
+    color: #FFFFFF;                   /* Texto claro */
+    width: 40%;                       /* Limita largura do texto */
+}
+li{
+    font-family: "Inter", sans-serif; /* Fonte usada na lista */
+    gap: 5px;                         /* Pequeno espaço interno dos itens */
+    width: 40%;                       /* Largura dos itens */
+    list-style: none;                 /* Remove bolinhas da lista */
+    margin-bottom: 10px;              /* Espaço entre os itens */
+    padding: 12px;                    /* Aumenta área clicável */
+    background: rgba(255, 255, 255, 0.2); /* Fundo suave */
+    border-radius: 10px;              /* Bordas arredondadas */
+    font-size: 16px;                  /* Tamanho do texto */
+    color: #f8f8ff;
+}
+.ano {
+    color: #1823be;
+    font-weight: bold;     /* Destaque para o ano */
+}
+
+/* --------------------- RESPONSIVIDADE --------------------- */
+
+@media (max-width: 490px){ /* Ativa quando a largura da tela for menor que 490px */
+    div.principal{
+        background-image: none; /* Remove imagem do fundo no celular */
+        width: 100%;            /* Usa largura total */
+    }
+    header{
+        height: 10%;            /* Ajusta tamanho do cabeçalho */
+        display: flex;          /* Layout flexível */
+        margin-left: 15px;      /* Espaçamento lateral */
+    }
+    main{
+        background-image: url(imgFundos/al-hilal.png); /* Coloca a imagem dentro do conteúdo */
+        background-repeat: no-repeat;
+        background-position: right top;                /* Coloca a imagem no topo da direita */
+        background-size: 250px 300px;                  /* Reduz tamanho para caber na tela */
+        margin-left: 10px;                             /* Ajusta alinhamento no celular */
+        min-height: 0;                                 /* Evita altura mínima exagerada */
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    h1{
+        font-size: 50px; /* Reduz tamanho do título no celular */
+    }
+    p{
+        min-height: 200px;  /* Garante espaço para o texto */
+        overflow-y: auto;   /* Permite rolagem interna */
+        margin-bottom: 60px;/* Aumenta espaçamento inferior */
+    }
+    ul{
+        display: flex;      /* Coloca itens lado a lado se possível */
+        flex-wrap: wrap;    /* Permite quebrar linha */
+        gap: 20px;          /* Espaçamento entre eles */
+    }
+    li{
+        display: flex;          /* Organiza o item internamente */
+        flex-direction: column; /* Empilha textos dentro dos itens */
+        gap: 8px;               /* Espaçamento interno */
+    }
 }
