@@ -66,7 +66,6 @@ ul.habilidades, .formacao, .contato{
     margin: 20px 10px;           /*Espaço externo: 20px em cima/baixo e 10px esquerdo/direita*/   
     width: 90%;                  /*Ocupa 90% da largura da tela*/ 
     gap: 20px;                   /*Espaço pequeno entre os itens*/
-    overflow-y: auto;            /*Ativa a rolagem vertical caso o conteudo seja maior */   
 }
 main{
     min-height: 600px;             /*Altura mínima garantida de 600px*/ 
@@ -123,6 +122,10 @@ section.experiencia{
 section.secundaria{
     width: 270px;   /* Define a largura fixa do elemento em 270px */
     height: 270px;  /* Define a altura fixa do elemento em 270px */
+    overflow-y: auto; /*Ativa a rolagem vertical caso o conteudo seja maior */       
+}
+section.secundaria::-webkit-scrollbar{
+    display: none;  /*Esconde a barra de rolagem no WebKit*/
 }
 h1,h3{
     font-family: "Montserrat";   /* Define a fonte principal do texto como Montserrat */
@@ -177,4 +180,4 @@ div.secundaria{
     div.esquerda {
         width: 45%;   /* Faz a div 'esquerda' ocupar também 45%, permitindo layout lado a lado */
     }
-    }
+}
