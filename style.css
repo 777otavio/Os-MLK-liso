@@ -19,10 +19,17 @@ div.principal{
     height: 90%;                                     /*Ocupa 90% da altura da tela*/ 
     display: flex;                                   /*Usa flexbox para organizar os itens internos*/       
     flex-direction: column;                          /*Organiza os elementos verticalemnte */   
-    overflow-y: auto;                                /*Ativa a rolagem vertical caso o conteudo seja maior */   
+    overflow-y: auto;                                /*Ativa a rolagem vertical caso o conteudo seja maior */
 }
-.principal::-webkit-scrollbar {
-    display: none; /*Esconde a barra de rolagem no WebKit*/
+.principal::-webkit-scrollbar{
+    width: 7px;
+    background-color: Gainsboro;
+    border-radius: 15px;
+}
+.principal::-webkit-scrollbar-thumb{
+    background-color: Silver;
+    border-radius: 15px;
+    height: 30px;
 }
 header{
     display: flex;                 /*Ativa flexbox para organizar os itens do header*/ 
@@ -89,6 +96,16 @@ section{
     border-color: rgba(0, 0, 0, 0.2);              /*Cor da borda (mas sem largura definda)*/ 
     box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.2); /*Sombra leve ao redor da seção*/
 }
+section::-webkit-scrollbar{
+    width: 4px;
+    background-color: Gainsboro;
+    border-radius: 15px;
+}
+section::-webkit-scrollbar-thumb{
+    background-color: Silver;
+    border-radius: 15px;
+    height: 30px;
+}
 section.sobreMim{
     background-color: whitesmoke; /* Define um fundo cinza bem claro para destacar o conteúdo */
     box-shadow: none;               /* Remove qualquer sombra do elemento */ 
@@ -98,17 +115,11 @@ section.sobreMim{
     margin-bottom: 15px;            /* Adiciona um espaço de 15px abaixo do elemento */
     overflow-y: auto;               /* Ativa a rolagem vertical caso o conteúdo ultrapasse a altura */
 }
-.sobreMim::-webkit-scrollbar {
-    display: none;    /*Esconde a barra de rolagem no WebKit*/
-}
 section#objetivo{
     width: 90%;            /* O elemento ocupa 90% da largura disponível */
     height: 30%;           /* O elemento ocupa 30% da altura do container */
     border: 1px #B0B0B0; /* Cria uma borda de 1px com cor cinza (#B0B0B0) */
     overflow-y: auto;      /* Ativa a rolagem vertical se o conteúdo ultrapassar a altura */
-}
-#objetivo::-webkit-scrollbar{
-    display: none;  /*Esconde a barra de rolagem no WebKit*/
 }
 section.experiencia{
     box-shadow: none;                 /* Remove qualquer sombra do elemento */
@@ -123,9 +134,6 @@ section.secundaria{
     width: 270px;   /* Define a largura fixa do elemento em 270px */
     height: 270px;  /* Define a altura fixa do elemento em 270px */
     overflow-y: auto; /*Ativa a rolagem vertical caso o conteudo seja maior */       
-}
-section.secundaria::-webkit-scrollbar{
-    display: none;  /*Esconde a barra de rolagem no WebKit*/
 }
 h1,h3{
     font-family: "Montserrat";   /* Define a fonte principal do texto como Montserrat */
